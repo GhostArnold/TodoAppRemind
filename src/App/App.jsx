@@ -10,6 +10,14 @@ function App() {
   function addTodoHanler(text) {
     setTodos([...todos, text]);
   }
+  function deleteTodoHandler(index) {
+    setTodos(
+      // Знак _ исполняет роль затычки
+      todos.filter((_, idx) => {
+        return idx !== index;
+      })
+    );
+  }
 
   return (
     <div className="App">
@@ -19,7 +27,7 @@ function App() {
       {/* Вывод списка задач */}
       {/* можно ещё todos.length === 0, но не рекомендуется */}
       {!todos.length && <h3>List is empty</h3>}
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
     </div>
   );
 }
