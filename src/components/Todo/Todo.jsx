@@ -1,5 +1,5 @@
-const Todo = () => {
-  return <div></div>;
+const Todo = ({ todo }) => {
+  return <div>{todo}</div>;
 };
 
 export default Todo;
