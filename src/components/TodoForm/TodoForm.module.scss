@@ -1,0 +1,23 @@
+.addItem {
+  border: 1px solid #845afc;
+  height: 35px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .addEntry {
+    background-color: transparent; /* Прозрачный фон */
+    border: none;
+    height: 100%;
+    outline: none;
+    margin-left: 5px;
+    color: #fff;
+  }
+  .addBtn {
+    background-color: #845afc;
+    border: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+}

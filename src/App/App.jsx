@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import TodoList from '../components/TodoList/TodoList';
 import TodoForm from '../components/TodoForm/TodoForm';
-import './App.css';
+import './App.scss';
 
 function App() {
   // Создаём состояние для списка задач
