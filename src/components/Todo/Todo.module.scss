@@ -4,4 +4,9 @@
   padding: 7px;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .icon {
+  }
 }
