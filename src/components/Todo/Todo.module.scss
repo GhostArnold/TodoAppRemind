@@ -7,6 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &.completed {
+    opacity: 0.5; // Делаем элемент более тусклым
+  }
+
   .num {
     display: flex;
     align-items: center;

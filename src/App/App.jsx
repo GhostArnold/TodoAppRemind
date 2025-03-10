@@ -24,7 +24,16 @@ function App() {
       })
     );
   }
-
+  // Чтобы отметить завершённые задачи
+  function toggleTodoHandler(id) {
+    setTodos(
+      todos.map((todo) => {
+        return todo.id === id
+          ? { ...todo, isCompleted: !todo.isCompleted }
+          : { ...todo };
+      })
+    );
+  }
   return (
     <div className="App">
       <h1>Todo App</h1>
@@ -33,7 +42,11 @@ function App() {
       {/* Вывод списка задач */}
       {/* можно ещё todos.length === 0, но не рекомендуется */}
       {!todos.length && <h3>List is empty</h3>}
-      <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
+      <TodoList
+        todos={todos}
+        deleteTodo={deleteTodoHandler}
+        toggleTodo={toggleTodoHandler}
+      />
     </div>
   );
 }
