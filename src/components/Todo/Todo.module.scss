@@ -5,8 +5,29 @@
   border-radius: 5px;
   cursor: pointer;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   align-items: center;
+  .num {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .functional {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .delete {
+      &:hover {
+        color: rgb(243, 63, 63);
+      }
+    }
+    .completed {
+      &:hover {
+        color: rgb(56, 188, 56);
+      }
+    }
+  }
   .icon {
+    font-size: 20px;
   }
 }

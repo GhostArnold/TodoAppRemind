@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import TodoList from '../components/TodoList/TodoList';
 import TodoForm from '../components/TodoForm/TodoForm';
 import './App.scss';
@@ -8,13 +9,18 @@ function App() {
   const [todos, setTodos] = useState([]);
   // Функция с помощью которой мы будем добавлять новую задачу
   function addTodoHanler(text) {
-    setTodos([...todos, text]);
+    const newTodo = {
+      text,
+      isCompleted: false,
+      id: uuidv4(),
+    };
+    setTodos([...todos, newTodo]);
   }
-  function deleteTodoHandler(index) {
+  function deleteTodoHandler(id) {
     setTodos(
       // Знак _ исполняет роль затычки
-      todos.filter((_, idx) => {
-        return idx !== index;
+      todos.filter((todo) => {
+        return todo.id !== id;
       })
     );
   }
